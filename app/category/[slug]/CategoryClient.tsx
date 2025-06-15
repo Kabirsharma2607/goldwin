@@ -166,7 +166,7 @@ export default function CategoryClient({ slug }: { slug: string }) {
           <Checkbox
             id="on-sale"
             checked={showOnSale}
-            onCheckedChange={setShowOnSale}
+            onCheckedChange={() => setShowOnSale(!showOnSale)}
           />
           <label htmlFor="on-sale" className="text-sm font-medium">
             On Sale
@@ -177,7 +177,7 @@ export default function CategoryClient({ slug }: { slug: string }) {
           <Checkbox
             id="in-stock"
             checked={showInStock}
-            onCheckedChange={setShowInStock}
+            onCheckedChange={() => setShowInStock(!showInStock)}
           />
           <label htmlFor="in-stock" className="text-sm font-medium">
             In Stock Only
